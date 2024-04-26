@@ -1,0 +1,30 @@
+.popup{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-height: 32px;
+
+    display: flex;
+    align-items: center;
+
+    
+}
+
+.popup__icon{
+    font-size: xx-large;
+
+    position: sticky;
+    left: 0;
+    top: 0;
+}
+
+.popup__text{
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.popup__hidden{
+    display: none;
+    visibility: hidden;
+}

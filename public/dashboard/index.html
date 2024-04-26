@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/style.css" />
+  </head>
+  <body>
+    <nav class="navigation__bar">
+      <ul class="navigation__bar--item">
+        <li>
+          <i class="fa-solid fa-plus"></i>
+          <span>Add Item</span>
+        </li>
+        <li>
+          <i class="fa-solid fa-user-pen"></i>
+          <span>Add User</span>
+        </li>
+        <li>
+          <i class="fa-solid fa-dollar-sign"></i>
+          <span>Sales</span>
+        </li>
+        <li>
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <span>Logout</span>
+        </li>
+      </ul>
+
+      <div class="nav--greeting">
+        <i class="fa-solid fa-user"></i>
+        <h1>welcome, <span>Pena</span></h1>
+      </div>
+    </nav>
+
+    <div class="container">
+      <table>
+        <thead>
+          <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>price</th>
+            <th>stock</th>
+            <th>available</th>
+            <th>stocker</th>
+            <th>sales</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="clickable">1</td>
+            <td>Flask</td>
+            <td>12.00</td>
+            <td>6</td>
+            <td>Yes</td>
+            <td>Pena</td>
+            <td class="clickable">3</td>
+            <td class="clickable">
+              <i class="fa-solid fa-pen-to-square"></i>
+              <span>Update Item</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="popup popup__hidden" id="popup">
+      <i id="popup-icon" class="fa-solid fa-circle-exclamation popup__icon"></i>
+      <p id="popup-text" class="popup__text"></p>
+    </div>
+  </body>
+  <script
+    src="https://kit.fontawesome.com/d4fd77631c.js"
+    crossorigin="anonymous"
+  ></script>
+</html>

@@ -1,0 +1,20 @@
+table{
+    width: 100%;
+}
+
+th {
+    padding: 10px 20px;
+    text-align: left;
+}
+
+thead{
+    background: #e6e3e3;
+}
+
+td{
+    padding: 10px 20px;
+}
+
+.clickable{
+    cursor: pointer;
+}
