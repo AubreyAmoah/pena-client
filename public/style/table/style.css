@@ -1,5 +1,7 @@
 table{
     width: 100%;
+    max-height: 70%;
+    position: relative;
 }
 
 th {
@@ -9,6 +11,8 @@ th {
 
 thead{
     background: #e6e3e3;
+    position: sticky;
+    top: 0;
 }
 
 td{
@@ -17,4 +21,14 @@ td{
 
 .clickable{
     cursor: pointer;
+}
+
+@media screen and (max-width: 860px) {
+    table{
+        font-size: 12px;
+    }
+
+    th {
+        padding: 5px 10px;
+    }
 }

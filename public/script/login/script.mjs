@@ -1,3 +1,5 @@
+import { defaultUrl } from "../global.mjs";
+
 const username = document.getElementById("login_username");
 const password = document.getElementById("login_password");
 const popup = document.getElementById("popup");
@@ -12,7 +14,7 @@ export const handleLogin = async () => {
       };
   
       try {
-        const response = await fetch("http://localhost:5500/api/auth/signin", {
+        const response = await fetch(`${defaultUrl}/api/auth/signin`, {
           method: "POST",
           headers: {
             "Content-type": "application/json",

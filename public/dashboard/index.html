@@ -4,9 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../style/style.css" />
   </head>
-  <body>
+  <body class="dashboard">
     <nav class="navigation__bar">
       <ul class="navigation__bar--item">
         <li>
@@ -21,7 +27,7 @@
           <i class="fa-solid fa-dollar-sign"></i>
           <span>Sales</span>
         </li>
-        <li>
+        <li id="logout">
           <i class="fa-solid fa-right-from-bracket"></i>
           <span>Logout</span>
         </li>
@@ -33,10 +39,11 @@
       </div>
     </nav>
 
+    <div class="search">
+      <input type="text" class="search__box" placeholder="Search.." />
+    </div>
+
     <div class="container">
-        <div class="search">
-            <input type="text" class="search__box" placeholder="Search..">
-        </div>
       <table>
         <thead>
           <tr>
@@ -48,22 +55,11 @@
             <th>stocker</th>
             <th>sales</th>
             <th></th>
+            <th></th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td class="clickable">1</td>
-            <td>Flask</td>
-            <td>12.00</td>
-            <td>6</td>
-            <td>Yes</td>
-            <td>Pena</td>
-            <td class="clickable">3</td>
-            <td class="clickable">
-              <i class="fa-solid fa-pen-to-square"></i>
-              <span>Update Item</span>
-            </td>
-          </tr>
+        <tbody id="item-list">
+
         </tbody>
       </table>
     </div>
@@ -72,9 +68,38 @@
       <i id="popup-icon" class="fa-solid fa-circle-exclamation popup__icon"></i>
       <p id="popup-text" class="popup__text"></p>
     </div>
+
+    <input type="checkbox" name="check" id="check" />
+    <label for="check" class="ham">
+      <div class="one"></div>
+      <div class="two"></div>
+      <div class="three"></div>
+    </label>
+
+    <div class="dropdown__menu">
+      <ul class="dropdown__menu--item">
+        <li>
+          <i class="fa-solid fa-plus"></i>
+          <span>Add Item</span>
+        </li>
+        <li>
+          <i class="fa-solid fa-user-pen"></i>
+          <span>Add User</span>
+        </li>
+        <li>
+          <i class="fa-solid fa-dollar-sign"></i>
+          <span>Sales</span>
+        </li>
+        <li id="logout">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <span>Logout</span>
+        </li>
+      </ul>
+    </div>
   </body>
   <script
     src="https://kit.fontawesome.com/d4fd77631c.js"
     crossorigin="anonymous"
   ></script>
+  <script type="module" src="/script/dashboard/logout/script.js"></script>
 </html>

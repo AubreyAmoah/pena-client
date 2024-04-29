@@ -21,4 +21,23 @@ body{
     background: #fff;
     position: relative;
     height: 100vh;
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.red{
+    color: rgb(238, 34, 34);
+}
+
+.green{
+    color: rgb(24, 100, 24);
+}
+
+.hidden{
+    display: none;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    position: relative;
 }
