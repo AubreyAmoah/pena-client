@@ -1,1 +1,1 @@
-export const defaultUrl = "http://localhost:5500"
+export const defaultUrl = "http://16.171.151.93"
