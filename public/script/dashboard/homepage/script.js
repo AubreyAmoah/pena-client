@@ -74,10 +74,10 @@ addUserBtn.addEventListener("click", (e) => {
   toggleOverlay();
   form.innerHTML = `              
         <div class="form__group">
-          <input type="text" name="" id="" placeholder="Username">
+          <input type="text" name="" id="" placeholder="username">
         </div>
         <div class="form__group">
-          <input class="submit" type="submit" value="Add Item">
+          <input class="submit" type="submit" value="Add User">
         </div>
           `;
 });
@@ -97,10 +97,10 @@ addUserMinBtn.addEventListener("click", (e) => {
   toggleOverlay();
   form.innerHTML = `              
         <div class="form__group">
-          <input type="text" name="" id="" placeholder="Item Name">
+          <input type="text" name="" id="" placeholder="username">
         </div>
         <div class="form__group">
-          <input class="submit" type="submit" value="Add Item">
+          <input class="submit" type="submit" value="Add User">
         </div>
           `;
 });
