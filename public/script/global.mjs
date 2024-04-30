@@ -1,1 +1,1 @@
-export const defaultUrl = "http://16.171.151.93"
+export const defaultUrl = "https://pena-42lj.onrender.com"
