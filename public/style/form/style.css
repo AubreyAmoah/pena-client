@@ -32,3 +32,28 @@
     background: white;
     color: #5c5a5a;
 }
+
+@media screen and (max-width: 360px) {
+    .form__group > input{
+        width: 100%;
+    }
+
+    .form__group > .input__small{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 300px) {
+
+    .form__group{
+        flex-direction: column;
+    }
+    .form__group > input{
+        width: 100%;
+    }
+
+    .form__group > .input__small{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

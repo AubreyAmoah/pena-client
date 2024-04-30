@@ -82,11 +82,6 @@ addUserBtn.addEventListener("click", (e) => {
           `;
 });
 
-closeOverlayBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  toggleOverlay();
-});
-
 
 //Toggle addUser popup mobile
 const addUserMinBtn = document.getElementById("adduser-min");

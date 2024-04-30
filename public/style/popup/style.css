@@ -59,3 +59,11 @@
 .popupoverlay__box--body{
     padding: 10px 20px;
 }
+
+@media screen and (max-width: 360px) {
+    .popupoverlay__box{
+        border-radius: 0;
+        height: 100%;
+        width: 100%;
+    }
+}
