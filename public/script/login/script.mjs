@@ -16,6 +16,7 @@ export const handleLogin = async () => {
       try {
         const response = await fetch(`${defaultUrl}/api/auth/signin`, {
           method: "POST",
+          credentials: "include",
           headers: {
             "Content-type": "application/json",
           },
@@ -23,8 +24,6 @@ export const handleLogin = async () => {
         });
   
         const result = await response.json();
-
-        console.log(result);
 
         const msg = result.data || result.msg;
     
@@ -48,11 +47,9 @@ export const handleLogin = async () => {
           if (result.success === 1) {
             setTimeout(function () {
               window.location.href = "/dashboard";
-            }, 6000);
+            }, 1000);
           }
         }
-  
-        return result;
       } catch (error) {
         if (popup.classList.contains("popup__hidden")) {
           popup.classList.remove("popup__hidden");
