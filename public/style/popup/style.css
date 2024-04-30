@@ -28,3 +28,34 @@
     display: none;
     visibility: hidden;
 }
+
+.popupoverlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(65, 65, 65, 0.534);
+}
+
+.popupoverlay__box{
+    background: white;
+    min-height: 250px;
+    border-radius: 10px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+.popupoverlay__box--head{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.popupoverlay__box--body{
+    padding: 10px 20px;
+}

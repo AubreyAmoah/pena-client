@@ -1,0 +1,34 @@
+.form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form__group{
+    width: 100%;
+    display: flex;
+    margin: 10px auto;
+}
+
+.form__group > input{
+    width: 300px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #5c5a5a;
+}
+
+.form__group > .input__small{
+    width: 150px;
+}
+
+.form__group > .submit{
+    cursor: pointer;
+    background: #5c5a5a;
+    color: white;
+    transition: all 10ms ease-in-out;
+}
+
+.form__group > .submit:hover{
+    background: white;
+    color: #5c5a5a;
+}

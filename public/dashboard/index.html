@@ -15,15 +15,15 @@
   <body class="dashboard">
     <nav class="navigation__bar">
       <ul class="navigation__bar--item">
-        <li>
+        <li id="additem">
           <i class="fa-solid fa-plus"></i>
           <span>Add Item</span>
         </li>
-        <li>
+        <li id="adduser">
           <i class="fa-solid fa-user-pen"></i>
           <span>Add User</span>
         </li>
-        <li>
+        <li id="sales">
           <i class="fa-solid fa-dollar-sign"></i>
           <span>Sales</span>
         </li>
@@ -35,7 +35,7 @@
 
       <div class="nav--greeting">
         <i class="fa-solid fa-user"></i>
-        <h1>welcome, <span>Pena</span></h1>
+        <h1>welcome, <span id="user"></span></h1>
       </div>
     </nav>
 
@@ -78,23 +78,38 @@
 
     <div class="dropdown__menu">
       <ul class="dropdown__menu--item">
-        <li>
+        <li id="additem-min">
           <i class="fa-solid fa-plus"></i>
           <span>Add Item</span>
         </li>
-        <li>
+        <li id="adduser-min">
           <i class="fa-solid fa-user-pen"></i>
           <span>Add User</span>
         </li>
-        <li>
+        <li id="sales-min">
           <i class="fa-solid fa-dollar-sign"></i>
           <span>Sales</span>
         </li>
-        <li id="logout">
+        <li id="logout-min">
           <i class="fa-solid fa-right-from-bracket"></i>
           <span>Logout</span>
         </li>
       </ul>
+    </div>
+
+    <div id="overlay" class="popupoverlay hidden">
+      <div class="popupoverlay__box">
+        <div class="popupoverlay__box--head">
+            <span id="overlay-title">Add Item</span>
+            <i id="overlay-close" class="fa-solid fa-close"></i>
+        </div>
+
+        <div class="popupoverlay__box--body">
+          <div id="form" class="form">
+
+          </div>
+        </div>
+      </div>
     </div>
   </body>
   <script
@@ -102,4 +117,5 @@
     crossorigin="anonymous"
   ></script>
   <script type="module" src="/script/dashboard/logout/script.js"></script>
+  <script type="module" src="/script/dashboard/homepage/script.js"></script>
 </html>

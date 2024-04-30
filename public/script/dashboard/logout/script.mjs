@@ -1,9 +1,6 @@
 import { defaultUrl } from "../../global.mjs";
-const popup = document.getElementById("popup");
-const popupIcon = document.getElementById("popup-icon");
-const popupText = document.getElementById("popup-text");
 
-export const handleLogout = async () => {
+export const handleLogout = async (popup, popupIcon, popupText) => {
   try {
     const response = await fetch(`${defaultUrl}/api/auth/logout`, {
       credentials: "include",
