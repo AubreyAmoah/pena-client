@@ -4,15 +4,13 @@ const popup = document.getElementById("popup");
 const popupIcon = document.getElementById("popup-icon");
 const popupText = document.getElementById("popup-text");
 
-export const addItem = async (name, price, stock) => {
+export const addUser = async (username) => {
   const data = {
-    name: name.value,
-    price: price.value,
-    stock: stock.value,
+    username: username.value,
   };
   console.log(data)
   try {
-    const response = await fetch(`${defaultUrl}/api/users/additem`, {
+    const response = await fetch(`${defaultUrl}/api/users/adduser`, {
       credentials: "include",
       method: "POST",
       headers: {
@@ -40,9 +38,7 @@ export const addItem = async (name, price, stock) => {
     }
 
     if (result.success === 1) {
-        name.value = ''
-        stock.value = ''
-        price.value = ''
+        username.value = ''
     }
 
     setTimeout(() => {

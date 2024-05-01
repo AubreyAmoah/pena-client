@@ -1,12 +1,28 @@
+import { addUser } from "./addUser/script.mjs";
+import { addItem } from "./additem/script.mjs";
 import { getMyDetails } from "./script.mjs";
 import { toggleOverlay } from "./toggleoverlay/script.mjs";
+
+
+function itemForm () {
+  const itemName = document.getElementById("name");
+  const itemPrice = document.getElementById("price");
+  const itemStock = document.getElementById("stock");
+  
+  addItem(itemName, itemPrice, itemStock);
+}
+
+function userForm () {
+  const username = document.getElementById('username');
+
+  addUser(username)
+}
 
 
 // Get your details
 const user = document.getElementById("user");
 
 getMyDetails(user);
-
 
 // Toggle add Item popup
 const addItemBtn = document.getElementById("additem");
@@ -18,16 +34,23 @@ addItemBtn.addEventListener("click", (e) => {
   toggleOverlay();
   form.innerHTML = `              
         <div class="form__group">
-          <input type="text" name="" id="" placeholder="Item Name">
+          <input type="text" name="" id="name" placeholder="Item Name">
         </div>
         <div class="form__group">
-          <input class="input__small" type="text" name="" id="" placeholder="Item Price">
-          <input class="input__small" type="number" name="" id="" placeholder="Item stock">
+          <input class="input__small" type="text" name="" id="price" placeholder="Item Price">
+          <input class="input__small" type="number" name="" id="stock" placeholder="Item stock">
         </div>
         <div class="form__group">
-          <input class="submit" type="submit" value="Add Item">
+          <input class="submit" type="submit" value="Add Item" id = "submit-item">
         </div>
           `;
+
+  const submitItem = document.getElementById("submit-item");
+
+  submitItem.addEventListener("click", (e) => {
+    e.preventDefault();
+    itemForm()
+  });
 });
 
 closeOverlayBtn.addEventListener("click", (e) => {
@@ -35,10 +58,10 @@ closeOverlayBtn.addEventListener("click", (e) => {
   toggleOverlay();
 });
 
-
 //Toggle addItem popup mobile
 const addItemMinBtn = document.getElementById("additem-min");
 const check = document.getElementById("check");
+
 
 addItemMinBtn.addEventListener("click", (e) => {
   e.preventDefault();
@@ -46,21 +69,24 @@ addItemMinBtn.addEventListener("click", (e) => {
   toggleOverlay();
   form.innerHTML = `              
         <div class="form__group">
-          <input type="text" name="" id="" placeholder="Item Name">
+          <input type="text" name="" id="name" placeholder="Item Name">
         </div>
         <div class="form__group">
-          <input class="input__small" type="text" name="" id="" placeholder="Item Price">
-          <input class="input__small" type="number" name="" id="" placeholder="Item stock">
+          <input class="input__small" type="text" name="" id="price" placeholder="Item Price">
+          <input class="input__small" type="number" name="" id="stock" placeholder="Item stock">
         </div>
         <div class="form__group">
-          <input class="submit" type="submit" value="Add Item">
+          <input class="submit" type="submit" value="Add Item" id="submit-item">
         </div>
           `;
+
+  const submitItem = document.getElementById("submit-item");
+
+  submitItem.addEventListener("click", (e) => {
+    e.preventDefault();
+    itemForm()
+  });
 });
-
-
-
-
 
 
 
@@ -74,14 +100,20 @@ addUserBtn.addEventListener("click", (e) => {
   toggleOverlay();
   form.innerHTML = `              
         <div class="form__group">
-          <input type="text" name="" id="" placeholder="username">
+          <input type="text" name="" id="username" placeholder="username">
         </div>
         <div class="form__group">
-          <input class="submit" type="submit" value="Add User">
+          <input class="submit" type="submit" value="Add User" id="submit-user">
         </div>
           `;
-});
 
+          const submitUser = document.getElementById('submit-user');
+
+          submitUser.addEventListener('click', (e) => {
+            e.preventDefault();
+            userForm();
+          })
+});
 
 //Toggle addUser popup mobile
 const addUserMinBtn = document.getElementById("adduser-min");
@@ -92,10 +124,17 @@ addUserMinBtn.addEventListener("click", (e) => {
   toggleOverlay();
   form.innerHTML = `              
         <div class="form__group">
-          <input type="text" name="" id="" placeholder="username">
+          <input type="text" name="" id="username" placeholder="username">
         </div>
         <div class="form__group">
-          <input class="submit" type="submit" value="Add User">
+          <input class="submit" type="submit" value="Add User" id="submit-user">
         </div>
           `;
+
+          const submitUser = document.getElementById('submit-user');
+
+          submitUser.addEventListener('click', (e) => {
+            e.preventDefault();
+            userForm();
+          })
 });

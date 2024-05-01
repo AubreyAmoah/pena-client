@@ -23,8 +23,6 @@ export const handleSignup = async () => {
 
     const result = await response.json();
 
-    console.log(result);
-
     const msg = result.data || result.msg;
 
     if (popup.classList.contains("popup__hidden")) {
