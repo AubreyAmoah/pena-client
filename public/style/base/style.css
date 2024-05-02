@@ -1,43 +1,74 @@
-*{
-    padding: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 16px;
+  font-size: 16px;
 }
 
-a{
-    text-decoration: none;
-    color: inherit;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-li{
-    list-style-type: none;
+li {
+  list-style-type: none;
 }
 
-body{
-    color: #5c5a5a;
-    background: #fff;
-    position: relative;
-    height: 100vh;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+body {
+  color: #5c5a5a;
+  background: #fff;
+  position: relative;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-.red{
-    color: rgb(238, 34, 34);
+.red {
+  color: rgb(238, 34, 34);
 }
 
-.green{
-    color: rgb(24, 100, 24);
+.green {
+  color: rgb(24, 100, 24);
 }
 
-.hidden{
-    display: none;
-    visibility: hidden;
-    width: 0;
-    height: 0;
-    position: relative;
+.hidden {
+  display: none;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  position: relative;
+}
+
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: #dadada;
+  font-size: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Define the keyframes for the rotation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg); /* Start at 0 degrees */
+  }
+  to {
+    transform: rotate(360deg); /* End at 360 degrees (full rotation) */
+  }
+}
+
+/* Apply the animation to an element */
+.loading__icon {
+  display: inline-block; /* Ensure it rotates around its own center */
+  animation: spin 2s linear infinite; /* Infinite animation with 2s duration */
 }

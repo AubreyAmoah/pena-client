@@ -44,6 +44,12 @@
     </div>
 
     <div class="container">
+      <div class="pagination">
+        <!-- Navigation controls -->
+        <button id="prev-page">Previous</button>
+        <span id="page-info"></span>
+        <button id="next-page">Next</button>
+    </div>
       <table>
         <thead>
           <tr>
@@ -58,13 +64,15 @@
             <th></th>
           </tr>
         </thead>
-        <tbody id="item-list">
-
-        </tbody>
+        <tbody id="item-list"></tbody>
       </table>
+      <div class="pagination">
+        <!-- Same controls at the bottom for easier navigation -->
+        <button id="prev-page-bottom">Previous</button>
+        <span id="page-info-bottom"></span>
+        <button id="next-page-bottom">Next</button>
     </div>
-
-
+    </div>
 
     <input type="checkbox" name="check" id="check" />
     <label for="check" class="ham">
@@ -97,14 +105,12 @@
     <div id="overlay" class="popupoverlay hidden">
       <div class="popupoverlay__box">
         <div class="popupoverlay__box--head">
-            <span id="overlay-title">Add Item</span>
-            <i id="overlay-close" class="fa-solid fa-close"></i>
+          <span id="overlay-title">Add Item</span>
+          <i id="overlay-close" class="fa-solid fa-close"></i>
         </div>
 
         <div class="popupoverlay__box--body">
-          <div id="form" class="form">
-
-          </div>
+          <div id="form" class="form"></div>
         </div>
       </div>
     </div>
@@ -112,6 +118,11 @@
     <div class="popup popup__hidden" id="popup">
       <i id="popup-icon" class="fa-solid fa-circle-exclamation popup__icon"></i>
       <p id="popup-text" class="popup__text"></p>
+    </div>
+
+    <div id="loading">
+      <span class="looading__text">Loading...</span
+      ><i class="fa-solid fa-spinner loading__icon"></i>
     </div>
   </body>
   <script

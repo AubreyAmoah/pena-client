@@ -1,6 +1,6 @@
 import { addUser } from "./addUser/script.mjs";
 import { addItem } from "./additem/script.mjs";
-import { getMyDetails } from "./script.mjs";
+import { getItems, getMyDetails } from "./script.mjs";
 import { toggleOverlay } from "./toggleoverlay/script.mjs";
 
 
@@ -23,6 +23,9 @@ function userForm () {
 const user = document.getElementById("user");
 
 getMyDetails(user);
+
+// Get ItemList
+getItems();
 
 // Toggle add Item popup
 const addItemBtn = document.getElementById("additem");

@@ -23,6 +23,15 @@ td{
     cursor: pointer;
 }
 
+.pagination {
+    margin: 10px 0;
+}
+
+.pagination button {
+    padding: 5px 10px;
+    margin-right: 5px;
+}
+
 @media screen and (max-width: 860px) {
     table{
         font-size: 12px;
