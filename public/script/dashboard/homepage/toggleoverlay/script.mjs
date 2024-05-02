@@ -1,3 +1,5 @@
+import { getItems } from "../script.mjs";
+
 const overlay = document.getElementById('overlay');
 
 export const toggleOverlay = () => {
@@ -5,5 +7,6 @@ export const toggleOverlay = () => {
         overlay.classList.remove('hidden')
     } else {
         overlay.classList.add('hidden')
+        getItems();
     }
 }

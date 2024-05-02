@@ -1,4 +1,5 @@
 import { defaultUrl } from "../../global.mjs";
+import { deleteItem } from "../../items/script.mjs";
 import { getUserUsername } from "../../user/script.mjs";
 
 export const getMyDetails = async (user) => {
@@ -63,7 +64,15 @@ export const getItems = async () => {
         const row = document.createElement("tr");
 
         // Loop through the required keys and create table cells
-        const keys = ["id", "name", "price", "stock", "available", "authorId", "Sales"];
+        const keys = [
+          "id",
+          "name",
+          "price",
+          "stock",
+          "available",
+          "authorId",
+          "Sales",
+        ];
 
         for (const key of keys) {
           const cell = document.createElement("td");
@@ -99,11 +108,19 @@ export const getItems = async () => {
         row.appendChild(deleteCell);
 
         itemList.appendChild(row); // Append the row to the table body
+
+        deleteCell.addEventListener("click", () => {
+          deleteItem(item.id);
+        });
       }
 
       // Update page information
-      document.getElementById("page-info").innerText = `Page ${currentPage} of ${totalPages}`;
-      document.getElementById("page-info-bottom").innerText = `Page ${currentPage} of ${totalPages}`;
+      document.getElementById(
+        "page-info"
+      ).innerText = `Page ${currentPage} of ${totalPages}`;
+      document.getElementById(
+        "page-info-bottom"
+      ).innerText = `Page ${currentPage} of ${totalPages}`;
 
       // Hide the loading element when done
       loadingElement.style.display = "none";
@@ -128,20 +145,23 @@ export const getItems = async () => {
     });
 
     // Sync the bottom pagination controls with the top
-    document.getElementById("prev-page-bottom").addEventListener("click", async () => {
-      if (currentPage > 1) {
-        currentPage--; // Go to previous page
-        await updateTable(); // Refresh the table content
-      }
-    });
+    document
+      .getElementById("prev-page-bottom")
+      .addEventListener("click", async () => {
+        if (currentPage > 1) {
+          currentPage--; // Go to previous page
+          await updateTable(); // Refresh the table content
+        }
+      });
 
-    document.getElementById("next-page-bottom").addEventListener("click", async () => {
-      if (currentPage < totalPages) {
-        currentPage++; // Go to next page
-        await updateTable(); // Refresh the table content
-      }
-    });
-
+    document
+      .getElementById("next-page-bottom")
+      .addEventListener("click", async () => {
+        if (currentPage < totalPages) {
+          currentPage++; // Go to next page
+          await updateTable(); // Refresh the table content
+        }
+      });
   } catch (error) {
     console.log("Error fetching items:", error);
   }
